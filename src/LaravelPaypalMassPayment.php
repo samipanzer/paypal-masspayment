@@ -97,7 +97,7 @@ class LaravelPaypalMassPayment {
          }
 
          if((0 == sizeof($httpParsedResponseAr)) || !array_key_exists('ACK', $httpParsedResponseAr)){
-          exit("Invalid HTTP Response for POST request({$requestString}) to $API_Endpoint.");
+          exit("Invalid HTTP Response for POST request({$paymentString}) to $API_Endpoint.");
          }
          
          return $httpParsedResponseAr;
